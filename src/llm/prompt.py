@@ -1,8 +1,18 @@
 def build_prompt(description: str) -> str:
     return f"""
-Extract the technical skills from the following job description.
+You are a strict information extraction system.
 
-Return ONLY a JSON list of skills.
+Extract ONLY technical skills from the job description.
+
+STRICT RULES:
+- Return ONLY a valid JSON array
+- No explanation
+- No text
+- No markdown
+- No duplicates
+- Only technical skills (programming, tools, cloud, databases)
+
+If you are unsure, return an empty array.
 
 Example:
 ["Python", "SQL", "AWS"]
