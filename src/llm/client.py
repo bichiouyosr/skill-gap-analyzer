@@ -1,6 +1,6 @@
 import httpx
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_URL = "http://localhost:11434/api/chat"
 
 
 def call_llm(prompt: str) -> str:
@@ -8,7 +8,9 @@ def call_llm(prompt: str) -> str:
         OLLAMA_URL,
         json={
             "model": "deepseek-coder",
-            "prompt": prompt,
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
             "stream": False,
             "options": {
                 "temperature": 0
@@ -19,4 +21,4 @@ def call_llm(prompt: str) -> str:
 
     response.raise_for_status()
 
-    return response.json()["response"].strip()
+    return response.json()["message"]["content"].strip()
