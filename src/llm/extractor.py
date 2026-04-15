@@ -1,7 +1,7 @@
 import json
 import re
 from llm.client import call_llm
-from llm.prompt import build_prompt
+from llm.prompt import build_batch_prompt
 
 
 def clean_json_response(text: str) -> str:
@@ -9,15 +9,42 @@ def clean_json_response(text: str) -> str:
     return match.group(0) if match else "[]"
 
 
-def extract_skills(description: str) -> list[str]:
-    prompt = build_prompt(description)
+def chunk_jobs(jobs: list[dict], batch_size: int) -> list[list[dict]]:
+    return [jobs[i:i + batch_size] for i in range(0, len(jobs), batch_size)]
 
-    response = call_llm(prompt)
 
-    cleaned = clean_json_response(response)
+def extract_skills_batch(jobs: list[dict], batch_size: int = 10) -> dict[str, list[str]]:
+    results: dict[str, list[str]] = {}
 
-    try:
-        skills = json.loads(cleaned)
-        return list(set(skills))  # remove duplicates
-    except Exception:
-        return []
+    for batch in chunk_jobs(jobs, batch_size=batch_size):
+        prompt = build_batch_prompt(batch)
+        response = call_llm(prompt)
+        cleaned = clean_json_response(response)
+
+        try:
+            parsed = json.loads(cleaned)
+        except json.JSONDecodeError:
+            parsed = []
+
+        for item in parsed:
+            job_id = str(item.get("job_id", "")).strip()
+            skills = item.get("skills", [])
+
+            if not job_id:
+                continue
+
+            if not isinstance(skills, list):
+                skills = []
+
+            normalized_skills = []
+            seen = set()
+
+            for skill in skills:
+                skill_str = str(skill).strip()
+                if skill_str and skill_str.lower() not in seen:
+                    normalized_skills.append(skill_str)
+                    seen.add(skill_str.lower())
+
+            results[job_id] = normalized_skills
+
+    return results
