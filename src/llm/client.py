@@ -1,24 +1,23 @@
 import httpx
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
+MODEL_NAME = "deepseek-coder"
 
 
 def call_llm(prompt: str) -> str:
-    response = httpx.post(
-        OLLAMA_URL,
-        json={
-            "model": "deepseek-coder",
-            "messages": [
-                {"role": "user", "content": prompt}
-            ],
-            "stream": False,
-            "options": {
-                "temperature": 0
-            }
-        },
-        timeout=60,
-    )
-
-    response.raise_for_status()
-
-    return response.json()["message"]["content"].strip()
+    with httpx.Client(timeout=240.0) as client:
+        response = client.post(
+            OLLAMA_URL,
+            json={
+                "model": MODEL_NAME,
+                "messages": [
+                    {"role": "user", "content": prompt}
+                ],
+                "stream": False,
+                "options": {
+                    "temperature": 0,
+                },
+            },
+        )
+        response.raise_for_status()
+        return response.json()["message"]["content"].strip()
