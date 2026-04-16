@@ -14,10 +14,13 @@ def call_llm(prompt: str) -> str:
                     {"role": "user", "content": prompt}
                 ],
                 "stream": False,
+                "format": "json",
                 "options": {
                     "temperature": 0,
                 },
             },
+
+            
         )
         response.raise_for_status()
         return response.json()["message"]["content"].strip()

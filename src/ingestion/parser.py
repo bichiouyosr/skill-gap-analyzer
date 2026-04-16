@@ -5,6 +5,5 @@ def parse_job(job: dict) -> dict:
         "company": job.get("entreprise", {}).get("nom"),
         "location": job.get("lieuTravail", {}).get("libelle"),
         "description": job.get("description"),
-        "date_posted": job.get("dateCreation"),
-        "source": "france_travail",
+        "date_posted": job.get("dateCreation")
     }

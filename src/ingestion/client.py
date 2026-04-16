@@ -21,7 +21,7 @@ def run() -> None:
         parsed_jobs = [parse_job(job) for job in raw_jobs]
 
         logger.info("Extracting skills with batch LLM processing...")
-        skills_by_job_id = extract_skills_batch(parsed_jobs, batch_size=10)
+        skills_by_job_id = extract_skills_batch(parsed_jobs, batch_size=2)
 
         logger.info("Merging extracted skills...")
         enriched_jobs = []
