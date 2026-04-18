@@ -1,16 +1,14 @@
 import json
 
 
-def build_batch_prompt(jobs: list[dict]) -> str:
+def build_prompt(jobs: list[dict]) -> str:
     payload = [
         {
-            "job_id": job["job_id"],
-            "description": (job.get("description") or "")[:1500],
+            "job_id": str(job["job_id"]).strip(),
+            "description": (job.get("description") or "")[:2000],
         }
         for job in jobs
     ]
-
-    jobs_json = json.dumps(payload, ensure_ascii=False, indent=2)
 
     return f"""
 You are a strict information extraction system.
@@ -22,22 +20,19 @@ STRICT RULES:
 - No explanation
 - No markdown
 - No comments
-- Keep the same job_id values
 - Output must be a JSON array
+- Return exactly one object per input job
+- Keep the exact same job_id values
 - Each item must have:
   - "job_id": string
   - "skills": array of strings
+- "skills" must always be a real JSON array, never a string
 - Only technical skills: programming languages, frameworks, libraries, cloud, databases, DevOps, data tools
 - No soft skills
 - No duplicates inside each skills list
-- If unsure, return an empty list for that job
-
-Expected output format:
-[
-  {{"job_id": "123", "skills": ["Python", "SQL"]}},
-  {{"job_id": "456", "skills": ["AWS", "Spark"]}}
-]
+- If no technical skill is found, return an empty list for that job
+- Never omit a job
 
 Jobs:
-{jobs_json}
+{json.dumps(payload, ensure_ascii=False, indent=2)}
 """

@@ -9,7 +9,7 @@ BASE_URL = "https://api.francetravail.io/partenaire/offresdemploi/v2"
 def fetch_jobs(token: str, keyword: str = "data engineer") -> list[dict]:
     headers = {"Authorization": f"Bearer {token}"}
 
-    params = {"motsCles": keyword,"range": "0-49"}
+    params = {"motsCles": keyword,"range": "0-4"}
 
     try:
         response = httpx.get(

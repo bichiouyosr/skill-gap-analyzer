@@ -1,8 +1,7 @@
 import httpx
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL_NAME = "deepseek-coder"
-
+MODEL_NAME = "qwen2.5:3b"
 
 def call_llm(prompt: str) -> str:
     with httpx.Client(timeout=240.0) as client:
@@ -19,8 +18,6 @@ def call_llm(prompt: str) -> str:
                     "temperature": 0,
                 },
             },
-
-            
         )
         response.raise_for_status()
         return response.json()["message"]["content"].strip()
