@@ -1,83 +1,78 @@
 [
   {
-    "job_id": "206VKJG",
-    "title": "Data engineer (H/F)",
-    "company": "OPENVALUE",
-    "location": "92 - NEUILLY SUR SEINE",
-    "description": "En tant que Data Engineer, vous jouerez un rôle clé dans la conception, la mise en œuvre et l'industrialisation des plateformes et pipelines data au service des projets d'IA Générative. Vous interviendrez au cœur des écosystèmes data & cloud de nos clients, en collaboration avec des experts data scientists, IA engineers et métiers, pour transformer la donnée en leviers d'innovation et de performance.\n\n Vos principales responsabilités :\n\nConcevoir, développer et maintenir des pipelines de données robustes, scalables et performants.\nIntégrer, transformer et fiabiliser les données issues de multiples sources (API, bases de données, fichiers, etc.).\nGarantir la qualité, la traçabilité et la gouvernance des données tout au long de leur cycle de vie.\nParticiper à la mise en place d'architectures data cloud modernes (Data Lake, Delta Lake, Data Warehouse, Data Mesh.).\nCollaborer avec les équipes IA pour préparer et servir les données nécessaires à l'entraînement ou au fonctionnement des modèles d'IA Générative.\nImplémenter des bonnes pratiques de développement (tests, documentation, CI/CD, code review).\nContribuer à la veille technologique et à la montée en compétence des équipes sur les sujets data & GenAI.\n\n Profil recherché :\n\nVous justifiez d'au moins 3 ans d'expérience en tant que Data Engineer.\nVous maîtrisez un ou plusieurs langages de programmation (Java et/ou Scala).\nVous appliquez les bonnes pratiques de développement : clarté du code, documentation, qualité logicielle.\nVous connaissez les design patterns (ex. : Singleton) et les outils de développement collaboratif (Git).\nVous comprenez les workflows data et savez construire et automatiser des pipelines de traitement.\nVous avez une bonne maîtrise du framework Spark.\nUne première expérience sur un Cloud Provider (Azure, GCP, AWS) est un plus.\nUne première expérience sur un projet d'IA Générative est fortement appréciée.\nVous connaissez ou avez expérimenté des outils d'IA Générative (Mistral, OpenAI) et des frameworks d'interaction avec les LLM (LangChain, Prompt Engineering).\nVous êtes familier avec la préparation et la structuration des données dans le contexte RAG (Retrieval-Augmented Generation).\nVous êtes reconnu pour votre agilité, votre esprit d'initiative et vos capacités de communication et d'écoute.\n\n Ce que nous offrons:\n\nDes projets structurants au cœur des stratégies data et IA de nos clients.\nL'opportunité de collaborer avec des experts data, IA et cloud dans un environnement d'excellence.\nUne culture du partage, de la veille et de la formation continue (Lunch & Learn en interne, formations IA et GenAI, certifications.)",
-    "date_posted": "2026-04-13T12:04:33.466Z",
+    "job_id": "207QYWM",
+    "title": "DATA ENGINEER F/H (H/F)",
+    "company": "ITEKWAY ILE DE FRANCE",
+    "location": "75 - PARIS 12",
+    "description": "Notre client, grand nom du secteur bancaire , développe des plateformes de données de pointe pour transformer ses processus décisionnels. Nous recherchons un(e) Data Engineer confirmé(e) pour concevoir, automatiser et industrialiser les pipelines de données à grande échelle, en garantissant la scalabilité et la robustesse des systèmes.\n\nVos missions :\n- Gestion des socles techniques:\n=>Développer, maintenir et faire évoluer les assets projets (modules de test et validation), de déploiement (scripts CI/CD) et d'infrastructure.\n=>Valider la conformité des évolutions d'infrastructure nécessaires aux cas d'usages..\n\n- Conception et implémentation des pipelines de données:\n=>Concevoir et développer des pipelines automatisés (ingestion et transformation) vers le Data Hub.\nUtiliser l'outil: xDI pour les mappings et développements afin d'assurer la traçabilité.\nOptimiser les pipelines pour garantir des performances élevées et une faible latence entre le Cloud et le Legacy.\n\n- Industrialisation et automatisation:\n=>Industrialiser les modèles de Machine Learning et les flux de données à grande échelle.\nCollaborer avec les Data Scientists et MLOps pour assurer la transition fluide del'exploration vers la production (Guidelines STELLAR).\n=>Automatiser la gestion des traitements pour réduire les interventions manuelles.\n\n- Gestion des données et optimisation:\n=>Optimiser les performances des requêtes et des pipelines via les meilleures pratiques d'architecture de stockage (raw, refined, trusted layers).\n=>Assurer une surveillance continue de la qualité et mettre en place des contrôles de validation.\n\n- Sécurité et gouvernance des données:\n=>Mettre en œuvre les solutions de sécurisation (chiffrage, accès, audits) en conformité avec le RGPD.\n=>Travailler avec le Data Office pour l'alignement avec les politiques définies.\n=>Maintenir la documentation technique (Confluence) et la gestion des métadonnées.\n\n- Environnement technique Stack:\nxDI (important), Spark, SQL, Python, Dataiku.Infrastructure : IBM Cloud, Data Hub, AS400 (Legacy).\n- Concepts : Data Warehouses, Data Hubs, Data Platform Build.\nDevOps : Git, pipelines CI/CD (Gitlab).\nMéthodologie : Agile (Squads).",
+    "date_posted": "2026-04-29T14:30:16.334Z",
     "skills": [
-      "Java",
-      "Scala",
+      "Python",
       "Spark",
-      "Git"
-    ]
-  },
-  {
-    "job_id": "206STLJ",
-    "title": "Data Analytics Engineer - Microsoft Fabric (H/F)",
-    "company": "ATALIAN",
-    "location": "94 - Vitry-sur-Seine",
-    "description": "Chaque jour, les 43 000 collaborateurs d'ATALIAN France, Groupe leader des services externalisés aux entreprises, s'engagent et accompagnent les entreprises et collectivités en façonnant avec elles les solutions adaptées à leurs besoins.\n\nATALIAN recrute pour sa direction des systèmes d'information, un/une RData Analytics Engineer - Microsoft Fabric (H/F) en CDI basé.e sur notre siège de Vitry sur Seine (94).\n\nDans le cadre de notre transformation data-driven, nous renforçons notre équipe Data pour accélérer l'industrialisation de nos pipelines data sur Microsoft Fabric, au service de nos métiers en leur proposant des indicateurs de performance.\n\nAu sein du département Data Factory, ce nouveau poste joue un rôle clé dans la construction et l'exploitation de l'actif data du Groupe. Il assure la conception et l'industrialisation des pipeline data, la modélisation décisionnelle, ainsi que la mise à disposition de reporting analytiques à forte valeur ajoutée. Il est responsable de la valorisation bout en bout des Data utilisées sur la plateforme FABRIC.\n\nMissions / Responsabilités clés :\n\nDans un contexte de forte croissance de nos volumes data (IoT, ticketing FM, contrats multisites), vous serez responsable du développement et de l'optimisation des pipelines data end-to-end sur Microsoft Fabric :\n\nConception et implémentation de pipelines Data Factory depuis la Landing Zone jusqu'aux couches Bronze, Silver et Gold.\nModélisation data warehouse et datamart en étoile (Star Schema) sur la couche Gold pour supporter l'analyse métier.\nCréation et optimisation de Semantic Models Power BI pour les dashboards exécutifs (selon les KPI du Groupe).\nAutomatisation des flux (Delta Lake, Notebook) et gouvernance des données sensibles (Purview).\nCollaboration avec les Data Analysts et Business Analysts pour aligner les modèles aux besoins.",
-    "date_posted": "2026-04-10T12:16:08.254Z",
-    "skills": [
-      "Python",
-      "Power BI",
-      "Delta Lake",
-      "Notebook",
-      "Purview"
-    ]
-  },
-  {
-    "job_id": "206SRRX",
-    "title": "Data Engineer - Data Solutions (H/F)",
-    "company": null,
-    "location": "92 - NEUILLY SUR SEINE",
-    "description": "Bienvenue chez JCDecaux !  \nAu sein de la Direction DataCorp, chargée de l'exploitation et de la valorisation des données à travers le groupe, nous recherchons un Data Engineer - Data Solutions (H/F) pour intégrer une équipe dynamique composée de Data Engineers, Data Scientists, Data Analysts et DevOps. Vous contribuerez à concevoir, industrialiser et opérer des Data Solutions destinées à nos clients internes (filiales) : ETL custom, algorithmes et méthodologies de production de données opérationnelles, génération d'insights, modèles de Machine Learning (prédiction, classification, optimisation, etc.).\n\nAu quotidien vous serez amené(e) à :\n-       Concevoir, développer et industrialiser des Data Solutions de bout-en-bout (de l'ingestion au monitoring) pour répondre aux besoins opérationnels des filiales.\n-       Construire et maintenir des pipelines de données (batch et/ou temps réel) robustes, performants et monitorés, pour alimenter ces solutions (ETL/ELT, APIs, pub/sub).\n-       Co-concevoir avec les Data Scientists et Data Analysts des algorithmes et méthodologies (segmentation, scoring, prévisions, optimisation, règles métier avancées, etc.) et les transformer en produits data industrialisés.\n-       Mettre en production des modèles de Machine Learning (MLOps) : packaging, déploiement, orchestration, suivi de performance, versioning des modèles et des datasets.\n-       Participer à la définition des architectures cibles des Data Solutions en vous appuyant sur la Data Platform \"Lakehouse\" de JCDecaux et sur les services Cloud disponibles.\n-       Optimiser la performance, la qualité, la fiabilité et les coûts d'exécution des Data Solutions (optimisation de requêtes, partitionnement, caching, choix de formats, dimensionnement infra).\n-       Évoluer à proximité des Product Owners dans la définition et delivery des Data Solutions..\n-       Contribuer à l'élaboration de bonnes pratiques d'architecture, de code, de tests et de monitoring (patterns de data products, data contracts, CI/CD, observabilité data) ;\n-       Assurer une veille technologique sur les architectures de data products, les bonnes pratiques Data Engineering / MLOps / ML Engineering, tester de nouveaux outils et partager vos retours (communautés internes, conférences, POC).\nAmoureux(se) de la Data, vous êtes motivé(e) par la création de solutions concrètes et utilisées au quotidien par les équipes opérationnelles. Vous aimez autant bâtir des pipelines robustes que transformer un algorithme en produit data fiable, scalable et maintenable.\nCurieux(se), autonome, vous avez le goût de l'optimisation et des approches algorithmiques, et vous savez travailler en proximité avec le métier pour comprendre les besoins et les traduire en solutions techniques pérennes.\nDe formation Bac +5 minimum de type école d'ingénieur ou université (informatique, mathématiques appliquées, data, statistiques, opérations de recherche ou équivalent), vous disposez d'au moins 3 ans d'expérience dans le traitement de données en environnement industriel, incluant le développement de solutions ou produits data sur une infrastructure Big Data ou Cloud.\nVous maîtrisez un environnement Cloud (AWS, Azure ou GCP) et avez déjà participé au déploiement d'applications ou services data en production.\nCompétences requises:\nMaîtrise des langages Python et SQL, avec de bonnes pratiques de développement (tests, packaging, revue de code, logging).\nMaîtrise des technologies de Data Engineering et de transformation :\nOutils de modélisation / transformation (dbt ou équivalent)\nConception d'ETL/ELT custom (Airflow, Dagster, etc.)\nStockage et traitement à l'échelle (Data Lake S3, Snowflake, Redshift ou équivalent)\n\nBonne compréhension des approches algorithmiques et des briques Data Science / ML :\nManipulation de données (pandas, PySpark, etc.)\nMise en production de modèles ...",
-    "date_posted": "2026-04-10T11:48:38.280Z",
-    "skills": [
-      "Python",
-      "Data Engineering",
-      "ETL/ELT",
-      "APIs",
-      "Cloud",
-      "Machine Learning",
-      "DevOps"
-    ]
-  },
-  {
-    "job_id": "206PTWH",
-    "title": "Data engineer - Lyon (69) (H/F)",
-    "company": "EPSYL",
-    "location": "69 - LYON 01",
-    "description": "A compétences égales, le poste est ouvert à tous.\n\nQUI SOMMES NOUS ET POURQUOI NOUS CHOISIR ? \nEPSYL est une société à forte composante de R&D positionnée dans le domaine des très hautes technologies. Nous concentrons notre activité autour des enjeux liés aux énergies décarbonées et à la transition énergétique en exploitant le potentiel des jumeaux numériques.\n\nNos différences :\nUne entreprise à taille humaine\nUne entreprise basée sur l'expertise scientifique et technique (jumeaux numériques)\nUne entreprise qui accompagne la création de start-up (incubateurs)\nUne culture d'entreprise forte avec un accompagnement pour une montée en compétences et un investissement sur la gestion de carrière.\n\nLe petit plus :\nUne équipe à l'esprit d'entreprise et d'innovation où nos primes et avantages s'ajoutent à la rémunération fixe (tickets restaurants, prime de fin d'année, prime vacances, RTT, télétravail, avantages liés à notre CSE.)\nLa rémunération est à négocier selon votre profil.\n\nCONTEXTE : \nNous recherchons un Data Engineer motivé pour participer à la conception, la structuration et l'optimisation de nos pipelines de données. Vous travaillerez en collaboration avec les data analysts, data scientists et équipes techniques pour garantir la disponibilité, la qualité et la fiabilité des données.\n\nMISSIONS : \nConcevoir, développer et maintenir des pipelines de données robustes et évolutifs.\nMettre en place et optimiser des architectures data (ETL/ELT).\nAssurer la qualité, la sécurité et la gouvernance des données.\nCollaborer avec les équipes internes pour comprendre leurs besoins et proposer des solutions adaptées.\nSuperviser les performances des systèmes de données et mettre en place des améliorations si nécessaire.\n\nPROFIL :\nUn bac+5 en informatique\nExpérience en tant que Data Engineer ou sur un poste similaire.\nMaîtrise d'outils et technologies data (ex. : Python, SQL, Spark, Airflow).\nConnaissance des environnements cloud (Azure, AWS ou GCP).\nSens de l'organisation, autonomie et capacité à travailler en équipe.\nCuriosité et envie d'apprendre.",
-    "date_posted": "2026-04-08T11:47:40.746Z",
-    "skills": [
-      "Python",
       "SQL",
-      "Spark",
-      "Airflow",
-      "Cloud",
-      "AWS"
+      "Dataiku"
     ]
   },
   {
-    "job_id": "206MWBD",
+    "job_id": "207QVWG",
+    "title": "Data Engineer (H/F)",
+    "company": "HOLENEK INGENIERIE",
+    "location": "44 - Nantes",
+    "description": "Dans le cadre du développement de ses activités data, notre client recherche un Data Engineer disposant d'une expertise sur Anaplan. La mission s'inscrit dans un environnement orienté pilotage de la performance (finance, supply chain ou controlling), avec des enjeux de structuration et de valorisation de la donnée.\n\n\nEn tant que Data Engineer, vos missions seront de : \n\n * Concevoir et maintenir des pipelines de données (collecte, transformation, intégration)\n * Analyser et exploiter les données afin de produire des indicateurs pertinents\n * Participer à la modélisation et à l'implémentation de solutions Anaplan\n * Optimiser les modèles existants et améliorer la performance des outils\n * Développer des reportings et dashboards à destination des équipes métiers\n * Collaborer étroitement avec les équipes fonctionnelles pour comprendre les besoins\n * Garantir la qualité, la fiabilité et la cohérence des données\n\n * 5 ans d'expérience minimum sur un poste similaire\n   \n   \n    Vos expertises, notre force commune\n * Formation Bac+5 en informatique, data ou équivalent\n * Expérience significative en data engineering et/ou data analysis\n * Maîtrise impérative d'Anaplan (modélisation, maintenance, optimisation)\n * Bon niveau en SQL et idéalement en Python\n * Connaissance d'outils BI (Power BI, Tableau.) appréciée\n * Capacité à évoluer dans un environnement métier (finance, supply chain.)\n\n\n\n Vos qualités humaines, nos valeurs partagées\n\n * Esprit analytique et rigueur\n * Autonomie et sens de l'organisation\n * Bon relationnel et capacité à vulgariser des sujets techniques\n * Esprit d'équipe\n * Proactivité et capacité à être force de proposition",
+    "date_posted": "2026-04-29T13:01:14.134Z",
+    "skills": [
+      "Python",
+      "Anaplan",
+      "SQL"
+    ]
+  },
+  {
+    "job_id": "207PTYT",
+    "title": "Data engineer",
+    "company": "AUTO DECLIC",
+    "location": "83 - FREJUS",
+    "description": "Acteur du trading automobile B2B en Europe depuis 2005, nous travaillons exclusivement avec des professionnels : marchands, loueurs, groupes de distribution.\n\nEn quelques mots :\n- Structure en croissance constante\n- Activité européenne, forte culture métier & data\n- Équipe à taille humaine, vision long terme\n- Basés à Fréjus, France\n\nLE POSTE \nOn renforce notre équipe tech pour bâtir notre infrastructure data stratégique : centralisation, automatisation, analytics métier, et préparation du logiciel métier futur.\nCe qui change :\n- Accès direct à la direction et aux décisions produit\n- Tu suis tes projets data dans la durée, avec impact réel sur le business\n- Des projets stratégiques qu'on te présentera en entretien\n\nTES MISSIONS\nArchitecture Data & Intégrations\n- Concevoir et mettre en place une infrastructure data centralisée\n- Intégrer les données depuis Expay, Orbeo, Zoho CRM via APIs et exports automatisés\n- Mettre en place un pipeline ETL automatisé (Python/Airflow)\n- Concevoir un schéma de données pour l'analytique et la décision\nData Quality & Enrichissement\n- Détection et fusion des doublons (clients, fournisseurs, véhicules)\n- Normalisation et nettoyage des données (marques, modèles, adresses, etc.)\n- Enrichissement via APIs externes (scoring finance, data marché)\n- Préparation des datasets pour les modèles IA et agents décisionnels\nAnalytics Métier\n- Développer les analyses marché VN/VO : prix par pays/modèle, écarts de marge\n- Identifier les niches commerciales (écarts > 2 000€, demandes par carburant, modèles performants)\n- Clustering fournisseurs/clients, prédictions demand et rotatifs\n- Stack : Python (Pandas, NumPy, Scikit-learn), SQL avancé\nDashboards & BI\n- Créer des dashboards décisionnels (Power BI ou équivalent)\n- Suivre les KPIs : marges, volumes, rotatifs, rentabilité, pipeline achat/vente\n- Scoring IA et recommandations stratégiques\nAPIs Data & Intégration Système\n- Concevoir et exposer des APIs REST robustes pour les données\n- Documenter et versionner les APIs\n- Collaborer avec l'équipe dev pour intégration du logiciel métier futur\n\nPROFIL DU CANDIDAT\n\nSTACK & COMPÉTENCES\nCe qu'on attend :\n- Data : Python (Pandas, NumPy), SQL avancé, orchestration (Airflow/Prefect)\n- DB : PostgreSQL ou MySQL, design de schémas, optimisation\n- Back : APIs REST, conception et documentation\n- Ops : Git, Docker, Linux\n- Les + : Machine Learning - Data Warehouse design - BI tools (Power BI/Tableau) - Web scraping - LLM/IA\n\nTON PROFIL\n- 2 ans minimum en data engineering ou domaine similaire\n- Expérience sur des outils métier, BI ou données critiques (pas du reporting vitrine)\n- Tu comprends vite les enjeux business\n- Autonome, rigoureux, curieux techniquement\n- Bon relationnel, tu sais communiquer clairement\nLe plus :\n- Tu as déjà bossé sur des outils internes ou du SaaS\n- Tu aimes comprendre le métier pour mieux architecturer\n- Tu cherches de l'impact et de la stabilité",
+    "date_posted": "2026-04-28T16:23:48.540Z",
+    "skills": [
+      "Python",
+      "Airflow",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Power BI",
+      "SQL",
+      "APIs"
+    ]
+  },
+  {
+    "job_id": "207MPRL",
     "title": "Data Engineer IA Copilot Studio & Automatisation IA (H/F)",
     "company": "BASSETTI GROUP",
     "location": "75 - Paris (Dept.)",
     "description": "Votre rôle se décline en 4 missions.\n\n1. Architecte d'Agents IA (Copilot Studio & RAG) : \n\n- Conception d'agents conversationnels évolués : Développer des copilotes capables de comprendre des contextes métiers complexes (réservations, logistique, support client).\n- Maîtrise du RAG (Retrieval-Augmented Generation) : Connecter les agents aux bases de connaissances internes via Azure AI Search pour garantir des réponses précises, sourcées et sécurisées.\n- Optimisation LLM : Intégrer et paramétrer les modèles via Azure OpenAI (GPT-4o, etc.) en mettant l'accent sur le Prompt Engineering de haut niveau.\n\n2. Orchestration & Automatisation \"Agentique\" : \n\n- Workflows Actionnables : Utiliser Power Automate pour permettre aux copilotes de déclencher des actions réelles (mise à jour de CRM, envoi de rapports, validation de workflows).\n- Interconnexion : Développer des connecteurs personnalisés pour lier la Power Platform aux APIs propriétaires du groupe.\n\n3. Ingénierie de Données pour l'IA : \n\n- Pipelines Data : Industrialiser les flux d'ingestion (Batch/Real-time) via Azure Data Factory pour alimenter les moteurs d'indexation.\n- Gouvernance & Qualité : Structurer les données non structurées (PDF, wikis, bases documentaires) pour maximiser la pertinence des systèmes RAG.\n\n4. Innovation et acculturation : \n\n- Cadrage métier : Animer des ateliers avec les directions opérationnelles pour identifier les cas d'utilisation à ROI immédiat.\n- MVP & Scale : Passer rapidement du prototype à une solution robuste, surveillée et sécurisée (AI Guardrails).",
-    "date_posted": "2026-04-07T10:09:08.853Z",
+    "date_posted": "2026-04-27T11:47:52.055Z",
     "skills": [
-      "Azure AI Search",
       "Power Automate",
-      "GPT-4o",
-      "Prompt Engineering",
-      "RAG",
+      "Azure AI Search",
       "Azure OpenAI",
-      "Azure Data Factory",
-      "Azure Cloud",
-      "Python"
+      "Prompt Engineering"
+    ]
+  },
+  {
+    "job_id": "207LTYP",
+    "title": "Responsable Data Engineer (H/F)",
+    "company": "AK RECRUTEMENT",
+    "location": "69 - Lyon 7e Arrondissement",
+    "description": "Notre partenaire est une entreprise en pleine expansion spécialisée dans le e-commerce. \n\nLa société repense entièrement à sa DSI, un chantier clé pour les prochaines années. Nous cherchons un profil engagé, prêt à insuffler une nouvelle énergie et à contribuer activement à cette transformation.\n\nNous recrutons aujourd'hui un Senior Data Engineer structurant, capable de construire une architecture data robuste, fiable et durable.\n\nContexte : \n\nUne base Data existe mais reste partiellement structurée\nDes pipelines sont en place (Airflow, Python)\nUn Data junior est présent\nLes besoins métiers sont très forts (marketing, logistique, finance, direction)\nLe DSI est impliqué mais ne peut plus porter la Data\nVous arrivez dans une phase clé :structurer, fiabiliser et faire évoluer la Data pour accompagner la croissance.\n\nStructurer la Data\n\nConcevoir une architecture data scalable\nStructurer le Data Warehouse\nDéfinir les modèles de données (dimensionnel, marts.)\nIndustrialiser\n\nConstruire / fiabiliser les pipelines ETL/ELT\nConnecter les sources (e-commerce, marketing, SI, marketplaces)\nAutomatiser les flux et améliorer la qualité des données\nServir le business\n\nAlimenter des dashboards fiables (Tableau)\nStructurer les indicateurs clés (CA, marge, conversion.)\nCollaborer directement avec les équipes métiers\nStructurer l'équipe\n\nEncadrer un Data junior\nMettre en place des bonnes pratiques\nPréparer la montée en puissance du pôle Data\nVous aurez 6 mois pour effectuer votre POC afin de construire votre équipe et prendre un rôle de Head of Data.\n\nConditions de poste : \nContrat CDI \nStatut cadre \nSalaire : 70K - 80K brut annuel en fixe \nTélétravail : 2 jours / semaine\nAvantages : Mutuelle (prise en charge à 50 %), RTT, livraison de repas sur place (pris en charge à 50 %), panier de fruits tous les jours, thé et café à volonté, séances de sport hebdomadaires avec un super coach.\n\nProfil recherché\nExpérience\n\n10 ans en Data Engineering / Analytics Engineering\nExpérience concrète de structuration ou refonte d'une stack data\nIdéalement expérience e-commerce ou multi-sources\nA la pointe de l'IA\n\nCompétences\n\nSQL expert\nPython (traitement, pipelines, API)\nAirflow ou équivalent\nData Warehouse (BigQuery, Snowflake, PostgreSQL.)\nModélisation de données\nBI (Tableau ou équivalent)\nIA / automatisation de process",
+    "date_posted": "2026-04-24T18:01:17.054Z",
+    "skills": [
+      "Python",
+      "Airflow",
+      "Data warehousing",
+      "ETL/ELT pipelines",
+      "Dimensional modeling",
+      "Business intelligence dashboards",
+      "Data engineering best practices"
     ]
   }
 ]

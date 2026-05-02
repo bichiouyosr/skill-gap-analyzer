@@ -1,4 +1,5 @@
 import json
+import time
 
 from core.logger import get_logger
 from llm.client import call_llm
@@ -6,67 +7,111 @@ from llm.prompt import build_prompt
 
 logger = get_logger(__name__)
 
+MAX_RETRIES = 3
 
-def extract_skills_batch(jobs: list[dict], batch_size: int = 1) -> dict[str, list[str]]:
-    results: dict[str, list[str]] = {}
 
-    for i in range(0, len(jobs), batch_size):
-        batch = jobs[i:i + batch_size]
+def _parse_llm_response(response: str) -> list[dict] | None:
+    """Parse LLM JSON response. Returns None if invalid."""
+    try:
+        parsed = json.loads(response)
+    except json.JSONDecodeError as exc:
+        logger.warning("JSON decode error: %s", exc)
+        return None
 
-        logger.info(
-            "Processing LLM batch %s with %s jobs",
-            (i // batch_size) + 1,
-            len(batch),
-        )
+    if isinstance(parsed, dict):
+        parsed = [parsed]
 
-        prompt = build_prompt(batch)
+    if not isinstance(parsed, list):
+        logger.warning("Unexpected format (not a list): %s", response[:200])
+        return None
+
+    return parsed
+
+
+def _clean_skills(skills: object) -> list[str]:
+    """Normalize skills returned by the LLM."""
+    if isinstance(skills, list) and len(skills) == 1 and isinstance(skills[0], list):
+        skills = skills[0]
+
+    if not isinstance(skills, list):
+        return []
+
+    clean_skills: list[str] = []
+    seen: set[str] = set()
+
+    for skill in skills:
+        skill_str = str(skill).strip()
+
+        if not skill_str:
+            continue
+
+        key = skill_str.lower()
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        clean_skills.append(skill_str)
+
+    return clean_skills
+
+
+def _extract_single_job(job: dict) -> list[str]:
+    """Call LLM for one job, retry up to MAX_RETRIES times."""
+    prompt = build_prompt([job])
+    expected_job_id = str(job["job_id"]).strip()
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        logger.info("Job %s — attempt %s/%s", expected_job_id, attempt, MAX_RETRIES)
+
         response = call_llm(prompt)
+        parsed = _parse_llm_response(response)
 
-        try:
-            parsed = json.loads(response)
-        except json.JSONDecodeError as exc:
-            logger.error("Failed to parse batch JSON: %s", exc)
-            logger.info("Raw response: %s", response[:1000])
+        if parsed is None:
+            logger.warning("Invalid JSON on attempt %s, retrying...", attempt)
+            time.sleep(1)
             continue
 
-        # IMPORTANT: if model returns a single object, wrap it in a list
-        if isinstance(parsed, dict):
-            parsed = [parsed]
-
-        if not isinstance(parsed, list):
-            logger.warning("Unexpected JSON format (not a list)")
-            logger.info("Raw response: %s", response[:1000])
-            continue
+        logger.info("LLM raw parsed: %s", parsed)
 
         for item in parsed:
             if not isinstance(item, dict):
                 continue
 
-            job_id = str(item.get("job_id", "")).strip()
-            skills = item.get("skills", [])
+            if str(item.get("job_id", "")).strip() == expected_job_id:
+                skills = item.get("skills", [])
 
-            if not job_id:
+            elif expected_job_id in item:
+                skills = item[expected_job_id]
+
+            else:
                 continue
 
-            if not isinstance(skills, list):
-                skills = []
+            clean_skills = _clean_skills(skills)
 
-            clean_skills: list[str] = []
-            seen: set[str] = set()
+            logger.info("Job %s — skills: %s", expected_job_id, clean_skills)
+            return clean_skills
 
-            for skill in skills:
-                skill_str = str(skill).strip()
-                if not skill_str:
-                    continue
+        logger.warning("Job %s not found in LLM response, retrying...", expected_job_id)
+        time.sleep(1)
 
-                key = skill_str.lower()
-                if key in seen:
-                    continue
+    logger.error(
+        "Job %s — failed after %s attempts, returning []",
+        expected_job_id,
+        MAX_RETRIES,
+    )
+    return []
 
-                seen.add(key)
-                clean_skills.append(skill_str)
 
-            results[job_id] = clean_skills
-            logger.info("Extracted skills for job %s: %s", job_id, clean_skills)
+def extract_skills_batch(jobs: list[dict]) -> dict[str, list[str]]:
+    """Extract skills for all jobs, one by one with retry."""
+    results: dict[str, list[str]] = {}
+
+    for i, job in enumerate(jobs, 1):
+        job_id = str(job["job_id"]).strip()
+
+        logger.info("Processing job %s/%s — %s", i, len(jobs), job_id)
+
+        results[job_id] = _extract_single_job(job)
 
     return results
